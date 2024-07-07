@@ -64,6 +64,7 @@ public class ExpressionTreeBuilder {
     }
 
     private boolean isOperator(char c) {
+
         return "+-*/".indexOf(c) >= 0;
     }
 

@@ -11,7 +11,6 @@ public class ExpressionTreeBuilder {
 
         for (int i = 0; i < expression.length(); i++) {
             char currentChar = expression.charAt(i);
-
             if ((currentChar == '-'||currentChar == '+') && (i == 0 || expression.charAt(i - 1) == '(')) {
                 StringBuilder operand = new StringBuilder();
                 operand.append(currentChar); // Append unary minus to the operand

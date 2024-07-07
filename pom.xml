@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.gram</groupId>
-	<artifactId>validate</artifactId>
+	<artifactId>ValidateArithmeticExpression</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>validate</name>
 	<description>Power Partner Solutions</description>

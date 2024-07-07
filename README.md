@@ -16,12 +16,7 @@ Additional Requirements
  
  
  
-
-
- 
- 
- 
-Examples:
+# Examples:
     • Basic Task
         ◦ Valid expressions:
             ▪ 1
@@ -44,13 +39,8 @@ Examples:
             ▪ 1 (2 - 3)
     • The list of valid and invalid examples is not exhaustive, i.e., follow the common mathematical rules to determine if a given expression is valid or not.
  
- 
- 
-
-
- 
- 
-Solution Rating
+  
+# Solution Rating
  
 The rating of the solution given would be done by these prioritized requirements:
     1. Functional correctness
@@ -68,3 +58,17 @@ Notes
         ◦ Follow all the SOLID/Clean code/Clean design principles, that, you think, are applicable
         ◦ Think of proper classes, interfaces, and exceptions design
         ◦ etc.
+
+ # Grammar for Arithmetic Expression
+ 
+     <ArithmeticExpression> ::= <Term> | <Term> "+" <ArithmeticExpression> | <Term> "-" <ArithmeticExpression>
+     <Term> ::= <Factor> | <Factor> "*" <Term> | <Factor> "/" <Term>
+     <Factor> ::= <Number> | "(" <ArithmeticExpression> ")"
+     <Number> ::= <Integer> | <Decimal>
+     <Integer> ::= <Digit> | <Digit> <Integer>
+     <Decimal> ::= <Integer> "." <Integer>
+     <Digit> ::= "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
+     
+     <Whitespace> ::= " " | <Whitespace> <Whitespace>
+
+ 

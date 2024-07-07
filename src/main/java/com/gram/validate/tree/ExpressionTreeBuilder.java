@@ -12,7 +12,6 @@ public class ExpressionTreeBuilder {
         for (int i = 0; i < expression.length(); i++) {
             char currentChar = expression.charAt(i);
 
-            // Handle unary minus at the beginning of operands
             if ((currentChar == '-'||currentChar == '+') && (i == 0 || expression.charAt(i - 1) == '(')) {
                 StringBuilder operand = new StringBuilder();
                 operand.append(currentChar); // Append unary minus to the operand
@@ -20,7 +19,7 @@ public class ExpressionTreeBuilder {
                 while (i < expression.length() && (Character.isDigit(expression.charAt(i)) || expression.charAt(i) == '.')) {
                     operand.append(expression.charAt(i++));
                 }
-                i--; // Adjust index after loop
+                i--;
                 operands.push(new OperandNode(Double.parseDouble(operand.toString())));
             } else if (Character.isDigit(currentChar) || currentChar == '.') {
                 StringBuilder operand = new StringBuilder();
